@@ -1,18 +1,5 @@
-# My Arch Linux dotfiles
-### Preview
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/619e7a57-019a-4c87-9a46-2ed8721f119f" />
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8692db38-ef9c-4a8e-bc40-f628898f3d42" />
+# Kozochka's Hyprland Config
 
-### Dependencies
-- hyprland
-- hyprsunset
-- waybar
-- waypaper
-- wireplumber
-- brightnessctl
-- playerctl
-- grimblast 
-- nwg-bar
-- kitty
-- yazi
-- rofi
+### Preview
+<img width="1920" height="1080" alt="2025-08-28T23:03:10,709493000+03:00" src="https://github.com/user-attachments/assets/00702928-4024-499e-825b-280efaa3cfeb" />
+<img width="1920" height="1080" alt="2025-08-28T23:03:22,650401373+03:00" src="https://github.com/user-attachments/assets/fb97befb-2c65-41f9-8d1c-7965703c6136" />
