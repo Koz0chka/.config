@@ -1,0 +1,89 @@
+window {
+    background-color: rgba(10, 5, 0, 0.95);
+}
+
+#outer-box {
+    margin: 2px;
+    border: 1px solid #ff2200;
+    box-shadow: 0 0 10px rgba(255, 50, 0, 0.7);
+}
+
+#inner-box {
+    background-color: rgba(20, 10, 5, 0.9);
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #ff5500, #aa0000) 1;
+    border-radius: 0;
+    padding: 30px;
+    margin: 0;
+}
+
+button, image {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+button.header-text {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #ff3300;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-shadow: 0 0 3px #ff2200;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+}
+
+button.header-text:hover,
+button.header-text:active {
+    background: none;
+    text-shadow: 0 0 3px #ff2200;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 3px;
+    color: #ffcc88;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-shadow: 0 0 3px #ff0000;
+    border: 2px solid #ff3300;
+    animation: burning 1.5s infinite alternate;
+}
+
+button:hover {
+    background: linear-gradient(
+        to right, 
+        rgba(255, 50, 0, 0.3), 
+        rgba(100, 0, 0, 0.5)
+    );
+    text-shadow: 0 0 8px #ff8800;
+    animation: burning-hover 0.8s infinite alternate;
+}
+
+button:active {
+    background: rgba(200, 30, 0, 0.7);
+}
+
+@keyframes burning {
+    0% {
+        text-shadow: 0 0 3px #ff0000, 0 0 5px rgba(255, 50, 0, 0.5);
+        border-left-color: #ff3300;
+    }
+    100% {
+        text-shadow: 0 0 8px #ff5500, 0 0 12px #ff2200;
+        border-left-color: #ff8800;
+    }
+}
+
+@keyframes burning-hover {
+    0% {
+        text-shadow: 0 0 8px #ff8800, 0 0 10px rgba(255, 100, 0, 0.8);
+        box-shadow: 0 0 5px rgba(255, 80, 0, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 15px #ffaa00, 0 0 20px #ff5500;
+        box-shadow: 0 0 15px rgba(255, 50, 0, 0.9);
+    }
+}

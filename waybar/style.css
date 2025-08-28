@@ -1,69 +1,24 @@
-
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: #A4161A;
     }
 
     to {
         color: white;
-        background-color: orange;
-        box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
-    }
-}
-
-@keyframes fox-glow {
-    0% {
-        box-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500;
-    }
-    50% {
-        box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500;
-    }
-    100% {
-        box-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500;
+        background-color: #FFBA08;
+        box-shadow: 0 0 5px #FFBA08;
     }
 }
 
 @keyframes blink-critical {
     70% {
-        color: white;
+        color: #A4161A;
     }
 
     to {
         color: white;
-        background-color: red;
-        box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
-    }
-}
-
-@keyframes glowing {
-    0% {
-        text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 15px #ff4500;
-    }
-    50% {
-        text-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500;
-    }
-    100% {
-        text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 15px #ff4500;
-    }
-}
-
-@keyframes sparkle {
-    0% {
-        opacity: 0.5;
-    }
-    25% {
-        opacity: 1;
-        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 1;
-        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
-    }
-    100% {
-        opacity: 0.5;
+        background-color: #D00000;
+        box-shadow: 0 0 5px #D00000;
     }
 }
 
@@ -73,11 +28,11 @@
     min-height: 0;
     margin: 1px;
     padding: 0;
-    color: orange;
+    color: #A4161A;
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0.0);
     font-family: Intel One Mono Nerd Font;
     font-size: 14px;
 }
@@ -105,18 +60,17 @@ window#waybar {
 #language {
     padding: 0.25rem 0.75rem;
     margin: 1px 3px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,1.0);
     border-radius: 20px;
+    color: #A4161A;
 }
 
 #clock {
-    color: orange;
-    animation: glowing 2s infinite alternate;
+    color: #A4161A;
 }
 
 #custom-weather {
-    color: orange;
-    animation: sparkle 2s infinite alternate;
+    color: #A4161A;
 }
 
 #battery {
@@ -126,11 +80,11 @@ window#waybar {
 }
 
 #battery.warning {
-    color: yellow;
+    color: #FFBA08;
 }
 
 #battery.critical {
-    color: red;
+    color: #D00000;
 }
 
 #battery.warning.discharging {
@@ -144,31 +98,30 @@ window#waybar {
 }
 
 #cpu {
-    color: orange;
-    animation: glowing 2s infinite alternate;
+    color: #A4161A;
 }
 
 #cpu.warning {
-    color: yellow;
+    color: #FFBA08;
 }
 
 #cpu.critical {
-    color: red;
+    color: #D00000;
 }
 
 #memory {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    color: orange;
+    color: #A4161A;
 }
 
 #memory.warning {
-    color: yellow;
+    color: #FFBA08;
 }
 
 #memory.critical {
-    color: red;
+    color: #D00000;
     animation-name: blink-critical;
     animation-duration: 2s;
     padding-left: 5px;
@@ -177,17 +130,17 @@ window#waybar {
 
 #mode {
     border-bottom: 3px transparent;
-    color: orange;
+    color: #A4161A;
     margin-left: 5px;
     padding: 7px;
 }
 
 #network.disconnected {
-    color: orange;
+    color: #A4161A;
 }
 
 #pulseaudio {
-    color: orange;
+    color: #A4161A;
     border-left: 0px;
     border-right: 0px;
     margin-right: 0;
@@ -203,149 +156,89 @@ window#waybar {
 }
 
 #temperature.critical {
-    color: red;
+    color: #D00000;
 }
 
 #window {
     font-weight: bold;
-    color: orange;
-    animation: glowing 2s infinite alternate;
+    color: #A4161A;
 }
 
 #custom-media {
-    color: orange;
+    color: #A4161A;
 }
 
 #workspaces {
     font-size: 16px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,1.0);
     border-radius: 20px;
 }
 
 #workspaces button {
     border-bottom: 1px solid transparent;
     margin-bottom: 0px;
-    color: orange;
+    color: #A4161A;
 }
+
 #workspaces button:hover {
     all: unset; 
-    background-color: #ff4500;
-    color: orange;
+    background-color: #F48C06;
+    color: white;
     border-radius: 15px;
     margin: 1px 3px;
-    animation: fox-glow 1.5s ease-in-out infinite;    
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid #A4161A;
     margin-bottom: 1px;
     padding-left: 0;
 }
 
 #workspaces button.active {
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid #A4161A;
     margin-bottom: 1px;
     padding-left: 0;
 }
 
 #workspaces button.urgent {
-    border-color: orange;
-    color: orange;
+    border-color: #A4161A;
+    color: #A4161A;
 }
 
 #workspaces button.active {
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid white;
     margin-bottom: 1px;
     padding-left: 0;
     border-radius: 15px;
-    animation: glowing-active 2s infinite alternate;
-    background-color: rgba(255, 140, 0, 0.5);
-    box-shadow: 0 0 6px 1px rgba(255, 140, 0, 0.5), 0 0 12px 2px rgba(255, 140, 0, 0.3);
+    background-color: white;
 }
-
-
-@keyframes glowing-active {
-    0% {
-        background-color: rgba(255, 140, 0, 0.5);
-        box-shadow: 0 0 6px 1px rgba(255, 140, 0, 0.5), 0 0 12px 2px rgba(255, 140, 0, 0.3);
-    }
-    50% {
-        background-color: rgba(255, 140, 0, 0.7);
-        box-shadow: 0 0 8px 2px rgba(255, 140, 0, 0.6), 0 0 16px 4px rgba(255, 140, 0, 0.4);
-    }
-    100% {
-        background-color: rgba(255, 140, 0, 0.5);
-        box-shadow: 0 0 6px 1px rgba(255, 140, 0, 0.5), 0 0 12px 2px rgba(255, 140, 0, 0.3);
-    }
-}
-
 
 #custom-power {
     font-size: 18px;
     padding-right: 1rem;
+    color: #A4161A;
 }
 
-#custom-launcher{
+#custom-launcher {
     font-size: 27px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,1.0);
     border-radius: 20px;
     padding: 1px 1px 1px 10px;
+    color: #A4161A;
 }
 
-
-#custom-screenshot{
+#custom-screenshot {
     padding: 0.25rem 0.75rem;
     margin: 1px 3px;
     background-color: rgba(0,0,0,0.8);
     border-radius: 20px;
+    color: #A4161A;
 }
 
 #custom-launcher:hover {
-    color: #ff4500;
+    color: #FFBA08;
     transition: 0.2s;
 }
 
 #backlight.icon {
     padding-right: 1px;
     font-size: 13px;
-}
-
-#custom-bitcoin {
-    font-family: "FiraCode Nerd Font";
-    background: linear-gradient(to bottom, #f9d423, #ff9800);
-    color: #3d2906;
-    font-weight: bold;
-    border-radius: 15px;
-    padding: 0 15px;
-    margin: 3px 8px;
-    border: 1px solid #ffcc00;
-    box-shadow: 
-        0 2px 5px rgba(0, 0, 0, 0.3),
-        inset 0 1px 1px rgba(255, 255, 255, 0.7);
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-    animation: gold-pulse 3s infinite alternate;
-}
-
-@keyframes gold-pulse {
-    0% {
-        box-shadow: 
-            0 2px 5px rgba(0, 0, 0, 0.3),
-            inset 0 1px 1px rgba(255, 255, 255, 0.7);
-    }
-    100% {
-        box-shadow: 
-            0 2px 8px rgba(255, 215, 0, 0.6),
-            inset 0 1px 2px rgba(255, 255, 255, 0.9);
-    }
-}
-
-#custom-bitcoin:hover {
-    background: #ffc107;
-    box-shadow: 
-        0 2px 10px rgba(255, 215, 0, 0.7),
-        inset 0 1px 3px rgba(255, 255, 255, 0.9);
-
-    background-image: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0.1) 20%,
-        transparent 50%
-    );
+    color: #A4161A;
 }

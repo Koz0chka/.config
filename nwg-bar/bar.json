@@ -10,10 +10,6 @@
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
-    "exec": "steam steam://rungameid/2280",
-    "icon": "/usr/share/nwg-bar/images/doom.svg"
-  },
-  {
     "label": "Reboot",
     "exec": "systemctl reboot",
     "icon": "/usr/share/nwg-bar/images/system-reboot.svg"

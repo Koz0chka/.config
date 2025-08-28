@@ -9,7 +9,7 @@
         "custom/launcher",
         "hyprland/workspaces",
         "tray",
-        "idle_inhibitor",
+        //"idle_inhibitor",
         "hyprland/language",
         "hyprland/window",
         "custom/screenshot"   
@@ -21,7 +21,6 @@
 
     "modules-right": [
         "custom/media",
-        "custom/bitcoin",
         "network",
         "network#vpn",
         "pulseaudio",
@@ -48,14 +47,14 @@
 
 	"hyprland/language": {
 	    "format-ru": "ru",
-        "format-en": "en",
+            "format-en": "en",
 	    "on-click": "hyprctl switchxkblayout \"at-translated-set-2-keyboard\" next",
-        "keyboard-name": "at-translated-set-2-keyboard"
+            "keyboard-name": "at-translated-set-2-keyboard"
 	},
 
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -168,18 +167,16 @@
         "format": "  {icon}  ",
         //"format":"{icon}",
         "format-icons": {
-            "1": " ",
-            "2": " ",
-            //"2": " ",
-            "3": " ",
-            "4": " ",
-            "5": " ",
-            "6": " ",
-            "7": " ",
-            "8": " ",
-            "9": " ",
-            "10": " ",
-            "11": "11"
+    	    "1": "󰫶",
+            "2": "󱂉",
+            "3": "󱂊",
+            "4": "󱂋",
+            "5": "󰬃",
+            "6": "󱂍",
+            "7": "󱂎",
+            "8": "󱂏",
+            "9": "󱂐",
+            "10": "󰬅"
         }
     },
 
@@ -254,7 +251,8 @@
     },
 
     "custom/launcher": {
-        "format":"󰣇 ",
+	"format":"󱙧 ",
+        //"format":"󰣇 ",
         //"format":" ",
         "on-click": "rofi -show drun",
         "tooltip": false,
@@ -273,20 +271,5 @@
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl stop",
         "exec": "/usr/bin/python3 $HOME/.config/waybar/scripts/mediaplayer.py | python3 .config/waybar/scripts/mediaplayer.py | jq --unbuffered --compact-output 2> /dev/null"
-    },
-
-    "custom/bitcoin": {
-        "format": "{}",
-        "exec": "~/.config/waybar/scripts/btc-widget.sh",
-        "interval": 300,
-        "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/btc-widget.sh toggle",
-        "on-click-right": "xdg-open https://www.coingecko.com/"
-    }//,
-
-    //  "custom/screenshot": {
-    //  "format": "📷",
-    //  "on-click": "exec grim"
-    // }
-
+    }
 }
