@@ -80,7 +80,6 @@ unity3d/
 user-dirs.dirs
 user-dirs.locale
 vscode-sqltools/
-waypaper/
 xdg-desktop-portal/
 xdg-desktop-portal-termfilechooser/
 yay/
@@ -146,3 +145,13 @@ baloofilerc
 hyprland.conf.file
 hyprland.conf.save
 xdg-desktop-portal-kderc
+kiorc
+kscreenlockerrc
+ksplashrc
+kwriterc
+id
+qquickfiledialog.conf
+Qv2ray.conf
+gbmxjwtditel.qv2ray.json
+xroyzpiylmow.qv2ray.json
+config.gen.json
