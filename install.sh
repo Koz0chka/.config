@@ -199,7 +199,7 @@ verify_installation() {
         hyprlang hyprsunset hyprutils hyprwayland-scanner fastfetch
         kitty kitty-shell-integration kitty-terminfo nwg-bar waybar
         waypaper grim grimblast-git slurp swww xdg-desktop-portal-hyprland
-        wayland wayland-protocols
+        wayland wayland-protocols snixembed
     )
 
     local missing=()
