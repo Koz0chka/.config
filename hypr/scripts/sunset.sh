@@ -1,2 +1,2 @@
 #!/bin/bash
-hyprsunset --temperature 3500 &
+hyprsunset --temperature 3000 &
