@@ -26,7 +26,7 @@
     border: none;
     border-radius: 0;
     min-height: 0;
-    margin: 1px;
+    margin: 2px;
     padding: 0;
     color: #A4161A;
 }
@@ -34,7 +34,7 @@
 window#waybar {
     background-color: rgba(0,0,0,0.0);
     font-family: Intel One Mono Nerd Font;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 #battery,
