@@ -1,0 +1,263 @@
+@keyframes blink-warning {
+    70% {
+        color: #ff9152;
+    }
+
+    to {
+        color: #ffe4ce;
+        background-color: #ffbc7b;
+        box-shadow: 0 0 5px #ffbc7b;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: #ff8358;
+    }
+
+    to {
+        color: #ffe4ce;
+        background-color: #ff8358;
+        box-shadow: 0 0 5px #ff8358;
+    }
+}
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 2px;
+    padding: 0;
+    color: #ff9152;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.0);
+    font-family: Intel One Mono Nerd Font;
+    font-size: 18px;
+}
+
+#battery,
+#clock,
+#backlight,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#custom-weather,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#idle_inhibitor,
+#window,
+#custom-power,
+#workspaces,
+#custom-media,
+#custom-PBPbattery,
+#custom-ai_chat,
+#bluetooth,
+#language {
+padding: 0.25rem 0.75rem;
+margin: 1px 3px;
+background-color: #222c3a;
+border-radius: 20px;
+color: #ff9152;
+}
+
+/* ДОБАВЛЕНО: Специальное правило для VPN */
+#network#vpn {
+color: #ff9152;
+}
+
+#clock {
+color: #ffbc7b;
+background-color: #1a1a1a;
+}
+
+#custom-weather {
+color: #ffbc7b;
+background-color: #1a1a1a;
+}
+
+#custom-power {
+color: #ff9152;
+background-color: #1a1a1a;
+}
+
+#custom-launcher {
+color: #ff9152;
+background-color: #1a1a1a;
+}
+
+#battery {
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+#battery.warning {
+color: #ffbc7b;
+}
+
+#battery.critical {
+color: #ff8358;
+}
+
+#battery.warning.discharging {
+animation-name: blink-warning;
+animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+animation-name: blink-critical;
+animation-duration: 2s;
+}
+
+#cpu {
+color: #ff9152;
+}
+
+#cpu.warning {
+color: #ffbc7b;
+}
+
+#cpu.critical {
+color: #ff8358;
+}
+
+#memory {
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+color: #ff9152;
+}
+
+#memory.warning {
+color: #ffbc7b;
+}
+
+#memory.critical {
+color: #ff8358;
+animation-name: blink-critical;
+animation-duration: 2s;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+#mode {
+border-bottom: 3px transparent;
+color: #ff9152;
+margin-left: 5px;
+padding: 7px;
+}
+
+#network.disconnected {
+color: #653131;
+}
+
+#pulseaudio {
+color: #ff9152;
+border-left: 0px;
+border-right: 0px;
+margin-right: 0;
+border-radius: 20px 0 0 20px;
+}
+
+#pulseaudio.microphone {
+border-left: 0px;
+border-right: 0px;
+margin-left: 0;
+padding-left: 0;
+border-radius: 0 20px 20px 0;
+}
+
+#temperature.critical {
+color: #ff8358;
+}
+
+#window {
+font-weight: bold;
+color: #ffbc7b;
+}
+
+#custom-media {
+color: #ff9152;
+}
+
+#workspaces {
+font-size: 16px;
+background-color: #222c3a;
+border-radius: 20px;
+}
+
+#workspaces button {
+border-bottom: 1px solid transparent;
+margin-bottom: 0px;
+color: #ff9152;
+background-color: #222c3a;
+padding: 0 12px;
+min-width: 20px;
+font-weight: bold;
+}
+
+#workspaces button:hover {
+all: unset;
+background-color: #ff9152;
+color: #1a1a1a;
+border-radius: 15px;
+margin: 1px 3px;
+border-bottom: 1px solid #ffbc7b;
+margin-bottom: 1px;
+padding: 0 12px;
+min-width: 20px;
+font-weight: bold;
+}
+
+#workspaces button.active {
+border-bottom: 1px solid #ffbc7b;
+margin-bottom: 1px;
+padding: 0 12px;
+border-radius: 15px;
+background-color: #1a1a1a;
+color: #ffbc7b;
+font-weight: bold;
+min-width: 20px;
+}
+
+#workspaces button.urgent {
+border-color: #ff8358;
+color: #ff8358;
+background-color: #222c3a;
+}
+
+#custom-power {
+font-size: 18px;
+padding-right: 1rem;
+}
+
+#custom-launcher {
+font-size: 27px;
+border-radius: 20px;
+padding: 1px 1px 1px 10px;
+}
+
+#custom-screenshot {
+padding: 0.25rem 0.75rem;
+margin: 1px 3px;
+background-color: #222c3a;
+border-radius: 20px;
+color: #ff9152;
+}
+
+#custom-launcher:hover {
+color: #ffbc7b;
+background-color: #222c3a;
+transition: 0.2s;
+}
+
+#backlight.icon {
+padding-right: 1px;
+font-size: 13px;
+color: #ff9152;
+}

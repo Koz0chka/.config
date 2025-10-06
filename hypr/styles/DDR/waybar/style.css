@@ -1,0 +1,252 @@
+@keyframes blink-warning {
+    70% {
+        color: #c0c0c0;
+    }
+
+    to {
+        color: #ffffff;
+        background-color: #b6c0ca;
+        box-shadow: 0 0 5px #b6c0ca;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: #c0c0c0;
+    }
+
+    to {
+        color: #ffffff;
+        background-color: #b64750;
+        box-shadow: 0 0 5px #b64750;
+    }
+}
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 2px;
+    padding: 0;
+    color: #c0c0c0;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.0);
+    font-family: Intel One Mono Nerd Font;
+    font-size: 18px;
+}
+
+#battery,
+#clock,
+#backlight,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#custom-weather,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#idle_inhibitor,
+#window,
+#custom-power,
+#workspaces,
+#custom-media,
+#custom-PBPbattery,
+#custom-ai_chat,
+#bluetooth,
+#language {
+padding: 0.25rem 0.75rem;
+margin: 1px 3px;
+background-color: #252d38;
+border-radius: 20px;
+color: #c0c0c0;
+}
+
+#clock {
+color: #c0c0c0;
+}
+
+#custom-weather {
+color: #c0c0c0;
+}
+
+#battery {
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+#battery.warning {
+color: #b6c0ca;
+}
+
+#battery.critical {
+color: #b64750;
+}
+
+#battery.warning.discharging {
+animation-name: blink-warning;
+animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+animation-name: blink-critical;
+animation-duration: 2s;
+}
+
+#cpu {
+color: #c0c0c0;
+}
+
+#cpu.warning {
+color: #b6c0ca;
+}
+
+#cpu.critical {
+color: #b64750;
+}
+
+#memory {
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+color: #c0c0c0;
+}
+
+#memory.warning {
+color: #b6c0ca;
+}
+
+#memory.critical {
+color: #b64750;
+animation-name: blink-critical;
+animation-duration: 2s;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+#mode {
+border-bottom: 3px transparent;
+color: #c0c0c0;
+margin-left: 5px;
+padding: 7px;
+}
+
+#network.disconnected {
+color: #630f1c;
+}
+
+#pulseaudio {
+color: #c0c0c0;
+border-left: 0px;
+border-right: 0px;
+margin-right: 0;
+border-radius: 20px 0 0 20px;
+}
+
+#pulseaudio.microphone {
+border-left: 0px;
+border-right: 0px;
+margin-left: 0;
+padding-left: 0;
+border-radius: 0 20px 20px 0;
+}
+
+#temperature.critical {
+color: #b64750;
+}
+
+#window {
+font-weight: bold;
+color: #c0c0c0;
+}
+
+#custom-media {
+color: #c0c0c0;
+}
+
+#workspaces {
+font-size: 16px;
+background-color: #252d38;
+border-radius: 20px;
+}
+
+#workspaces button {
+border-bottom: 1px solid transparent;
+margin-bottom: 0px;
+color: #c0c0c0;
+}
+
+/* ОТДЕЛЬНОЕ ПРАВИЛО ДЛЯ АКТИВНЫХ РАБОЧИХ СТОЛОВ */
+#workspaces button.active {
+border-bottom: 1px solid #630f1c;
+margin-bottom: 1px;
+padding-left: 0;
+border-radius: 15px;
+background-color: #c0c0c0;
+color: #252d38;
+}
+
+#workspaces button * {
+color: #c0c0c0;
+}
+
+#workspaces button.active * {
+color: #252d38;
+}
+
+#workspaces button:hover {
+all: unset;
+background-color: #c0c0c0;
+color: #252d38;
+border-radius: 15px;
+margin: 1px 3px;
+border-bottom: 1px solid #630f1c;
+margin-bottom: 1px;
+padding-left: 0;
+}
+
+#workspaces button.urgent {
+border-color: #b64750;
+color: #b64750;
+}
+
+#custom-power {
+font-size: 18px;
+padding-right: 1rem;
+color: #c0c0c0;
+}
+
+#custom-launcher {
+font-size: 27px;
+background-color: #252d38;
+border-radius: 20px;
+padding: 1px 1px 1px 10px;
+color: #c0c0c0;
+}
+
+#custom-screenshot {
+padding: 0.25rem 0.75rem;
+margin: 1px 3px;
+background-color: #252d38;
+border-radius: 20px;
+color: #c0c0c0;
+}
+
+#custom-launcher:hover {
+color: #b6c0ca;
+transition: 0.2s;
+}
+
+#backlight.icon {
+padding-right: 1px;
+font-size: 13px;
+color: #c0c0c0;
+}
+
+#network#vpn {
+color: #c0c0c0;
+}

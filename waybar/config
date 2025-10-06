@@ -12,9 +12,9 @@
         //"idle_inhibitor",
         "hyprland/language",
         "hyprland/window",
-        "custom/screenshot"   
+        "custom/screenshot"
     ],
- 
+
     "modules-center": [
         "clock",
     ],
@@ -34,7 +34,7 @@
         // "backlight#value",
     ],
 
-    
+
     // Modules
 
     "idle_inhibitor": {
@@ -98,7 +98,7 @@
                     "on-scroll-down": "shift_down"
                     }
         },
-        
+
     "cpu": {
         "interval": 5,
         "format": "  {usage}% ({load})", // Icon: microchip
@@ -124,7 +124,7 @@
     "memory": {
         "interval": 5,
         "format": "  {}%", // Icon: memory
-        "on-click": "kitty -e 'btop'", 
+        "on-click": "kitty -e 'btop'",
         "states": {
             "warning": 70,
             "critical": 90
@@ -158,7 +158,7 @@
         "max-length": 120
     },
 
-    
+
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -180,7 +180,7 @@
         }
     },
 
- 
+
 
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
@@ -257,7 +257,7 @@
         "on-click": "rofi -show drun",
         "tooltip": false,
     },
-    
+
     "custom/media": {
         "format": "{}",
         "return-type": "json",
