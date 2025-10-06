@@ -76,9 +76,6 @@ Win + F12 - v2rayn
 Win + L - VSCode
 
 Win + J - Jupyter Notebook
+
+Win + F8 - Styles
 ```
-
-## Wallpaper
-Win + R -> Waypaper
-
-Or change config in ~/.config/waypaper/config.ini
