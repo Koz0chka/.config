@@ -89,7 +89,7 @@ install_official_packages() {
         hyprland hyprcursor hyprlang hyprutils
         kitty waybar grim slurp swww
         xdg-desktop-portal-hyprland wayland wayland-protocols
-        fastfetch
+        fastfetch rofi yazi code
     )
 
     sudo pacman -S --needed --noconfirm "${OFFICIAL_PACKAGES[@]}"
@@ -102,7 +102,7 @@ install_aur_packages() {
         hyprland-qt-support hyprland-qtutils
         hyprgraphics hyprsunset hyprwayland-scanner
         kitty-shell-integration kitty-terminfo
-        nwg-bar waypaper grimblast-git
+        nwg-bar waypaper grimblast-git librewolf v2rayn
     )
 
     for pkg in "${AUR_PACKAGES[@]}"; do
