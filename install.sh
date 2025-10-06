@@ -89,7 +89,7 @@ install_official_packages() {
         hyprland hyprcursor hyprlang hyprutils
         kitty waybar grim slurp swww
         xdg-desktop-portal-hyprland wayland wayland-protocols
-        fastfetch rofi yazi code
+        fastfetch rofi yazi code archlinux-xdg-menu
     )
 
     sudo pacman -S --needed --noconfirm "${OFFICIAL_PACKAGES[@]}"
@@ -103,6 +103,7 @@ install_aur_packages() {
         hyprgraphics hyprsunset hyprwayland-scanner
         kitty-shell-integration kitty-terminfo
         nwg-bar waypaper grimblast-git librewolf v2rayn
+        grim slurp wl-clipboard jq
     )
 
     for pkg in "${AUR_PACKAGES[@]}"; do
