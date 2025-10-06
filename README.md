@@ -17,8 +17,14 @@ chmod +x ~/Download/install.sh
 ./install.sh
 ```
 
+## .config is not visible
+Enable "Show hidden files" in file manager
+
+<img width="299" height="289" alt="screenshot_2025-10-06_13-33-43" src="https://github.com/user-attachments/assets/22619fdb-e97b-4262-b946-05c5e797ce41" />
+
 ## Screen is black
-Uncomment the first line in ~/.config/hypr/config/monitor.conf by using another shell (e.g. KDE), and comment another/
+Uncomment the first line in ~/.config/hypr/config/monitor.conf by using another shell (e.g. KDE), and comment another
+
 <img width="383" height="102" alt="image" src="https://github.com/user-attachments/assets/0324ea8c-c3c1-4b81-a8eb-291fc4d00cec" />
 
 ## Binds
