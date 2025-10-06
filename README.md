@@ -17,6 +17,10 @@ chmod +x ~/Download/install.sh
 ./install.sh
 ```
 
+## Screen is black
+Uncomment the first line in ~/.config/hypr/config/monitor.conf by using another shell (e.g. KDE), and comment another/
+<img width="383" height="102" alt="image" src="https://github.com/user-attachments/assets/0324ea8c-c3c1-4b81-a8eb-291fc4d00cec" />
+
 ## Binds
 ``` bash
 Win + Q - Terminal
