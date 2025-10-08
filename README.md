@@ -79,3 +79,13 @@ Win + J - Jupyter Notebook
 
 Win + F8 - Styles
 ```
+
+## Sources
+Goat Lucifer art: [RyuRoo](https://x.com/ryuroo)
+
+Deer Maple art: [Jayrnski](https://www.reddit.com/user/JayInDisarray/), [HydraB](https://x.com/HydraBBB/status/1666783430615658497)
+
+Fox Xenia art: [Extinct](https://nitecrew.rip/@extinct)
+
+DDR photo: [DW](https://static.dw.com/image/18986701_1006.jpg), [The Sour Kraut](https://www.youtube.com/watch?v=zgltyEdu62E)
+
