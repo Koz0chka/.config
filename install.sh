@@ -29,9 +29,24 @@ check_user() {
     fi
 }
 
+update_system() {
+    print_info "Updating system and package databases..."
+    sudo pacman -Syu --noconfirm
+    if [ $? -eq 0 ]; then
+        print_success "System updated successfully"
+    else
+        print_error "Failed to update system"
+        exit 1
+    fi
+}
+
 check_yay() {
     if ! command -v yay &> /dev/null; then
         print_info "yay not installed. Installing..."
+
+        # Убедимся что установлены зависимости для сборки yay
+        sudo pacman -S --needed --noconfirm git base-devel
+
         git clone https://aur.archlinux.org/yay.git /tmp/yay
         cd /tmp/yay
         makepkg -si --noconfirm
@@ -41,6 +56,9 @@ check_yay() {
             print_error "Failed to install yay"
             exit 1
         fi
+    else
+        print_info "Updating yay..."
+        yay -Syu --noconfirm
     fi
 }
 
@@ -56,7 +74,7 @@ check_dependencies() {
 
     if [ ${#missing[@]} -ne 0 ]; then
         print_info "Installing missing dependencies: ${missing[*]}"
-        sudo pacman -S --needed --noconfirm "${missing[@]}"
+        sudo pacman -Sy --needed --noconfirm "${missing[@]}"
     fi
 }
 
@@ -92,7 +110,7 @@ install_official_packages() {
         fastfetch rofi yazi code archlinux-xdg-menu
     )
 
-    sudo pacman -S --needed --noconfirm "${OFFICIAL_PACKAGES[@]}"
+    sudo pacman -Sy --needed --noconfirm "${OFFICIAL_PACKAGES[@]}"
 }
 
 install_aur_packages() {
@@ -172,7 +190,7 @@ install_hyprland_deps() {
         bluez-utils
     )
 
-    sudo pacman -S --needed --noconfirm "${HYPRLAND_DEPS[@]}"
+    sudo pacman -Sy --needed --noconfirm "${HYPRLAND_DEPS[@]}"
 }
 
 setup_services() {
@@ -180,6 +198,10 @@ setup_services() {
 
     if pacman -Q bluez &> /dev/null; then
         sudo systemctl enable --now bluetooth.service
+    fi
+
+    if pacman -Q networkmanager &> /dev/null; then
+        sudo systemctl enable --now NetworkManager.service
     fi
 }
 
@@ -200,7 +222,7 @@ verify_installation() {
         hyprlang hyprsunset hyprutils hyprwayland-scanner fastfetch
         kitty kitty-shell-integration kitty-terminfo nwg-bar waybar
         waypaper grim grimblast-git slurp swww xdg-desktop-portal-hyprland
-        wayland wayland-protocols snixembed
+        wayland wayland-protocols
     )
 
     local missing=()
@@ -223,6 +245,7 @@ main() {
     print_info "=== Hyprland config installation for Arch Linux ==="
 
     check_user
+    update_system
     check_dependencies
     check_yay
     create_temp_dir

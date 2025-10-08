@@ -1,24 +1,24 @@
 @keyframes blink-warning {
     70% {
-        color: #c0c0c0;
+        color: #A4161A;
     }
 
     to {
-        color: #ffffff;
-        background-color: #b6c0ca;
-        box-shadow: 0 0 5px #b6c0ca;
+        color: white;
+        background-color: #FFBA08;
+        box-shadow: 0 0 5px #FFBA08;
     }
 }
 
 @keyframes blink-critical {
     70% {
-        color: #c0c0c0;
+        color: #A4161A;
     }
 
     to {
-        color: #ffffff;
-        background-color: #b64750;
-        box-shadow: 0 0 5px #b64750;
+        color: white;
+        background-color: #D00000;
+        box-shadow: 0 0 5px #D00000;
     }
 }
 
@@ -28,7 +28,7 @@
     min-height: 0;
     margin: 2px;
     padding: 0;
-    color: #c0c0c0;
+    color: #A4161A;
 }
 
 window#waybar {
@@ -58,195 +58,187 @@ window#waybar {
 #custom-ai_chat,
 #bluetooth,
 #language {
-padding: 0.25rem 0.75rem;
-margin: 1px 3px;
-background-color: #252d38;
-border-radius: 20px;
-color: #c0c0c0;
+    padding: 0.25rem 0.75rem;
+    margin: 1px 3px;
+    background-color: rgba(0,0,0,1.0);
+    border-radius: 20px;
+    color: #A4161A;
 }
 
 #clock {
-color: #c0c0c0;
+    color: #A4161A;
 }
 
 #custom-weather {
-color: #c0c0c0;
+    color: #A4161A;
 }
 
 #battery {
-animation-timing-function: linear;
-animation-iteration-count: infinite;
-animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #battery.warning {
-color: #b6c0ca;
+    color: #FFBA08;
 }
 
 #battery.critical {
-color: #b64750;
+    color: #D00000;
 }
 
 #battery.warning.discharging {
-animation-name: blink-warning;
-animation-duration: 3s;
+    animation-name: blink-warning;
+    animation-duration: 3s;
 }
 
 #battery.critical.discharging {
-animation-name: blink-critical;
-animation-duration: 2s;
+    animation-name: blink-critical;
+    animation-duration: 2s;
 }
 
 #cpu {
-color: #c0c0c0;
+    color: #A4161A;
 }
 
 #cpu.warning {
-color: #b6c0ca;
+    color: #FFBA08;
 }
 
 #cpu.critical {
-color: #b64750;
+    color: #D00000;
 }
 
 #memory {
-animation-timing-function: linear;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-color: #c0c0c0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: #A4161A;
 }
 
 #memory.warning {
-color: #b6c0ca;
+    color: #FFBA08;
 }
 
 #memory.critical {
-color: #b64750;
-animation-name: blink-critical;
-animation-duration: 2s;
-padding-left: 5px;
-padding-right: 5px;
+    color: #D00000;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #mode {
-border-bottom: 3px transparent;
-color: #c0c0c0;
-margin-left: 5px;
-padding: 7px;
+    border-bottom: 3px transparent;
+    color: #A4161A;
+    margin-left: 5px;
+    padding: 7px;
 }
 
 #network.disconnected {
-color: #630f1c;
+    color: #A4161A;
 }
 
 #pulseaudio {
-color: #c0c0c0;
-border-left: 0px;
-border-right: 0px;
-margin-right: 0;
-border-radius: 20px 0 0 20px;
+    color: #A4161A;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 0;
+    border-radius: 20px 0 0 20px;
 }
 
 #pulseaudio.microphone {
-border-left: 0px;
-border-right: 0px;
-margin-left: 0;
-padding-left: 0;
-border-radius: 0 20px 20px 0;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: 0;
+    padding-left: 0;
+    border-radius: 0 20px 20px 0;
 }
 
 #temperature.critical {
-color: #b64750;
+    color: #D00000;
 }
 
 #window {
-font-weight: bold;
-color: #c0c0c0;
+    font-weight: bold;
+    color: #A4161A;
 }
 
 #custom-media {
-color: #c0c0c0;
+    color: #A4161A;
 }
 
 #workspaces {
-font-size: 16px;
-background-color: #252d38;
-border-radius: 20px;
+    font-size: 16px;
+    background-color: rgba(0,0,0,1.0);
+    border-radius: 20px;
 }
 
 #workspaces button {
-border-bottom: 1px solid transparent;
-margin-bottom: 0px;
-color: #c0c0c0;
-}
-
-/* ОТДЕЛЬНОЕ ПРАВИЛО ДЛЯ АКТИВНЫХ РАБОЧИХ СТОЛОВ */
-#workspaces button.active {
-border-bottom: 1px solid #630f1c;
-margin-bottom: 1px;
-padding-left: 0;
-border-radius: 15px;
-background-color: #c0c0c0;
-color: #252d38;
-}
-
-#workspaces button * {
-color: #c0c0c0;
-}
-
-#workspaces button.active * {
-color: #252d38;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 0px;
+    color: #A4161A;
 }
 
 #workspaces button:hover {
-all: unset;
-background-color: #c0c0c0;
-color: #252d38;
-border-radius: 15px;
-margin: 1px 3px;
-border-bottom: 1px solid #630f1c;
-margin-bottom: 1px;
-padding-left: 0;
+    all: unset; 
+    background-color: #F48C06;
+    color: white;
+    border-radius: 15px;
+    margin: 1px 3px;
+    border-bottom: 1px solid #A4161A;
+    margin-bottom: 1px;
+    padding-left: 0;
+}
+
+#workspaces button.active {
+    border-bottom: 1px solid #A4161A;
+    margin-bottom: 1px;
+    padding-left: 0;
 }
 
 #workspaces button.urgent {
-border-color: #b64750;
-color: #b64750;
+    border-color: #A4161A;
+    color: #A4161A;
+}
+
+#workspaces button.active {
+    border-bottom: 1px solid white;
+    margin-bottom: 1px;
+    padding-left: 0;
+    border-radius: 15px;
+    background-color: white;
 }
 
 #custom-power {
-font-size: 18px;
-padding-right: 1rem;
-color: #c0c0c0;
+    font-size: 18px;
+    padding-right: 1rem;
+    color: #A4161A;
 }
 
 #custom-launcher {
-font-size: 27px;
-background-color: #252d38;
-border-radius: 20px;
-padding: 1px 1px 1px 10px;
-color: #c0c0c0;
+    font-size: 27px;
+    background-color: rgba(0,0,0,1.0);
+    border-radius: 20px;
+    padding: 1px 1px 1px 10px;
+    color: #A4161A;
 }
 
 #custom-screenshot {
-padding: 0.25rem 0.75rem;
-margin: 1px 3px;
-background-color: #252d38;
-border-radius: 20px;
-color: #c0c0c0;
+    padding: 0.25rem 0.75rem;
+    margin: 1px 3px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    color: #A4161A;
 }
 
 #custom-launcher:hover {
-color: #b6c0ca;
-transition: 0.2s;
+    color: #FFBA08;
+    transition: 0.2s;
 }
 
 #backlight.icon {
-padding-right: 1px;
-font-size: 13px;
-color: #c0c0c0;
-}
-
-#network#vpn {
-color: #c0c0c0;
+    padding-right: 1px;
+    font-size: 13px;
+    color: #A4161A;
 }

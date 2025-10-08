@@ -6,6 +6,9 @@ HYPR_CONF="$CONFIG_DIR/hyprland.conf"
 WAYPAPER_CONF="$HOME/.config/waypaper/config.ini"
 WALLPAPERS_DIR="$HOME/.config/Wallpapers"
 WAYBAR_CONF_DIR="$HOME/.config/waybar"
+ROFI_CONF="$HOME/.config/rofi/config.rasi"
+KITTY_CONF="$HOME/.config/kitty/kitty.conf"
+NWG_BAR_CONF_DIR="$HOME/.config/nwg-bar"
 
 styles=($(find "$STYLES_DIR" -maxdepth 1 -type d -printf "%f\n" | tail -n +2))
 
@@ -85,6 +88,72 @@ if [ -d "$WAYBAR_CONF_DIR" ]; then
         cp "$waybar_style_css" "$WAYBAR_CONF_DIR/style.css"
         #sleep 0.1
         waybar &
+    fi
+fi
+
+if [ -f "$ROFI_CONF" ]; then
+    rofi_style_dir="$STYLES_DIR/$selected/rofi"
+
+    if [ -d "$rofi_style_dir" ]; then
+        rofi_theme=$(find "$rofi_style_dir" -name "*.rasi" | head -n 1)
+
+        if [ -n "$rofi_theme" ]; then
+            cp "$ROFI_CONF" "$ROFI_CONF.backup"
+
+            sed -i "s|@theme \".*\"|@theme \"$rofi_theme\"|g" "$ROFI_CONF"
+            sed -i "s|@import \".*\"|@import \"$rofi_theme\"|g" "$ROFI_CONF"
+
+            echo "Rofi theme path updated to: $rofi_theme"
+        fi
+    fi
+fi
+
+if [ -f "$KITTY_CONF" ]; then
+    kitty_style_dir="$STYLES_DIR/$selected/kitty"
+
+    if [ -d "$kitty_style_dir" ]; then
+        kitty_theme=$(find "$kitty_style_dir" -name "*.conf" | head -n 1)
+
+        if [ -n "$kitty_theme" ]; then
+            cp "$KITTY_CONF" "$KITTY_CONF.backup"
+
+            sed -i "s|^include.*|include $kitty_theme|g" "$KITTY_CONF"
+
+            echo "Kitty theme path updated to: $kitty_theme"
+            pkill -USR1 kitty
+        fi
+    fi
+fi
+
+if [ -d "$HOME/.config/fastfetch" ]; then
+    fastfetch_style_dir="$STYLES_DIR/$selected/fastfetch"
+
+    if [ -d "$fastfetch_style_dir" ]; then
+        fastfetch_config=$(find "$fastfetch_style_dir" -name "config.jsonc" | head -n 1)
+
+        if [ -n "$fastfetch_config" ]; then
+            if [ -f "$HOME/.config/fastfetch/config.jsonc" ]; then
+                cp "$HOME/.config/fastfetch/config.jsonc" "$HOME/.config/fastfetch/config.jsonc.backup"
+            fi
+
+            cp "$fastfetch_config" "$HOME/.config/fastfetch/config.jsonc"
+            echo "Fastfetch config updated from: $fastfetch_config"
+        fi
+    fi
+fi
+
+if [ -d "$NWG_BAR_CONF_DIR" ]; then
+    nwg_bar_style_css="$STYLES_DIR/$selected/nwg-bar/style.css"
+
+    if [ -f "$nwg_bar_style_css" ]; then
+        if [ -f "$NWG_BAR_CONF_DIR/style.css" ]; then
+            cp "$NWG_BAR_CONF_DIR/style.css" "$NWG_BAR_CONF_DIR/style.css.backup"
+        fi
+
+        cp "$nwg_bar_style_css" "$NWG_BAR_CONF_DIR/style.css"
+        echo "nwg-bar style.css updated from: $nwg_bar_style_css"
+
+        pkill nwg-bar
     fi
 fi
 

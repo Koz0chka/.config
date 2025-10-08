@@ -1,4 +1,4 @@
 
-//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/home/kozochka/.config/hypr/styles/Lucifer/rofi/Lucifer.rasi"
 
-@theme "~/.config/rofi/Infernal-Red-Theme.rasi"
+@theme "/home/kozochka/.config/hypr/styles/Lucifer/rofi/Lucifer.rasi"

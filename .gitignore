@@ -167,3 +167,9 @@ libvirt/
 haruna
 kded_device_automounterrc
 device_automounter_kcmrc
+winboat/
+winboat
+config.rasi.backup
+config.jsonc.backup
+kitty.conf.backup
+style.css.backup
