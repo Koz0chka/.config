@@ -48,7 +48,6 @@ lazydocker/
 lgogdownloader/
 libreoffice/
 matplotlib/
-menus/
 micro/
 mimeapps.list
 nautilus/
@@ -173,3 +172,4 @@ config.rasi.backup
 config.jsonc.backup
 kitty.conf.backup
 style.css.backup
+applications-merged/
