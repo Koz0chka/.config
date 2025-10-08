@@ -2,6 +2,8 @@
 <img width="1920" height="1080" alt="2025-08-31T14_47_05,059608412+03_00" src="https://github.com/user-attachments/assets/7654add6-1b53-42dc-8e04-218cb5533b21" />
 <img width="1920" height="1080" alt="2025-08-31T14_47_50,829027369+03_00" src="https://github.com/user-attachments/assets/2de574c1-559f-49ba-88d3-7818607460ef" />
 <img width="1920" height="1080" alt="2025-08-31T14_49_28,469308220+03_00" src="https://github.com/user-attachments/assets/95a36947-593a-490b-a135-2847489b7f30" />
+<img width="1921" height="1081" alt="screenshot_2025-10-08_18-43-37" src="https://github.com/user-attachments/assets/17e79bf1-6cf4-4579-a950-8b6eb92118c6" />
+
 
 # FAQ
 ## How to install
